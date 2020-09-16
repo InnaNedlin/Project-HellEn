@@ -33,10 +33,21 @@ h3 {
   font-style: normal;
   font-weight: 800;
   font-size: 46px;
-  line-height: 6;
+  line-height: 1.3;
   letter-spacing: 0.03em;
-
   color: $second-text-color;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1320px) {
+    margin-bottom: 50px;
+  }
 }
 
 .flex-container {
@@ -66,9 +77,10 @@ h3 {
   box-sizing: border-box;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
-  @media screen and (max-width: 319px) {
+  @media screen and (max-width: 320px) {
+    width: 100%;
+
     &:not(:last-child) {
-      width: 100%;
       margin-bottom: 15px;
     }
   }
@@ -102,44 +114,47 @@ h3 {
       margin-right: 0;
     }
   }
+}
 
-  .icon-container {
-    fill: #ff6b09;
+.icon-container {
+  fill: #ff6b09;
+  width: 100%;
+  @media screen and (min-width: 320px) {
+    margin-top: 29px;
+    margin-bottom: 19px;
   }
 
-  .container-title {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 28px;
-    /* or 140% */
-
-    text-align: center;
-    letter-spacing: 0.08em;
-
-    color: #111518;
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
+}
 
-  .description {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.56;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #b9b9b9;
-  }
+.container-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #111518;
+}
 
-  .hover-box {
-    background: #ffffff;
-    &:hover,
-    &:focus {
-      color: #ffffff;
-      fill: #ffffff;
-      background-color: $accent-color;
-      box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-    }
-  }
+.description {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #b9b9b9;
+}
+
+.hover-box:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: $accent-color;
+  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 }
