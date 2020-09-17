@@ -421,13 +421,10 @@ h3 {
 
 .section-doit {
   width: 100%;
-  background: #e5e5e5;
 }
 
 @media screen and (max-width: 767px) {
   .section-doit {
-    padding-left: 20px;
-    padding-right: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -435,8 +432,6 @@ h3 {
 
 @media screen and (min-width: 768px) {
   .section-doit {
-    padding-left: 40px;
-    padding-right: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -444,8 +439,6 @@ h3 {
 
 @media screen and (min-width: 1320px) {
   .section-doit {
-    padding-left: 183px;
-    padding-right: 183px;
     margin-top: 130px;
     margin-bottom: 130px;
   }
@@ -578,9 +571,27 @@ h3 {
 }
 
 @media screen and (min-width: 1320px) {
-  .container-element tr:nth-child(3n) {
+  .container-element:nth-child(3n) {
     margin-right: 0;
   }
+}
+
+@media screen and (min-width: 1320px) {
+  .container-element:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.container-link:hover .box-container {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #ff6b09;
+  -webkit-box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+}
+
+.box-container {
+  width: 100%;
 }
 
 .icon-container {
@@ -649,7 +660,9 @@ h3 {
 }
 
 .description::before {
-  margin-bottom: 23px;
+  margin-right: 130px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   display: block;
   content: "";
   width: 20px;
@@ -657,9 +670,21 @@ h3 {
   background-color: #ff6b09;
 }
 
-.hover-box:hover {
-  color: #ffffff;
-  fill: #ffffff;
-  background-color: #ff6b09;
+@media screen and (max-width: 767px) {
+  .description::before {
+    margin-left: 130px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .description::before {
+    margin-left: 160px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .description::before {
+    margin-left: 200px;
+  }
 }
 /*# sourceMappingURL=1index.css.map */
