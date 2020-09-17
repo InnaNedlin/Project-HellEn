@@ -104,6 +104,7 @@ h3 {
 }
 
 .container-element {
+  padding: 10px;
   background: $fourth-text-color;
   box-sizing: border-box;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
@@ -122,20 +123,11 @@ h3 {
     }
   }
 
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 4 * 10px) / 2);
-    // margin-right: 20px;
-    // margin-bottom: 27px;
-  }
-
   @media screen and (min-width: 768px) and (max-width: 1319px) {
     &:not(:nth-child(2n)) {
       margin-right: 20px;
     }
-
-    // tr:nth-child(2n) {
-    //   margin-right: 0;
-    // }
+    flex-basis: calc((100% - 4 * 10px) / 2);
   }
 
   @media screen and (min-width: 1320px) {
@@ -155,24 +147,6 @@ h3 {
       margin-bottom: 0;
     }
   }
-}
-
-// .container-element:hover {
-//   color: $fourth-text-color;
-//   fill: $fourth-text-color;
-//   background-color: $accent-color;
-//   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-// }
-
-.container-link:hover .box-container {
-  color: $fourth-text-color;
-  fill: $fourth-text-color;
-  background-color: $accent-color;
-  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-}
-
-.box-container {
-  width: 100%;
 }
 
 .icon-container {
@@ -220,7 +194,7 @@ h3 {
   @media screen and (max-width: 1319px) {
     font-size: 12px;
     line-height: 1.67;
-    padding-bottom: 22px;
+    // padding-bottom: 22px;
   }
 
   @media screen and (min-width: 1320px) {
@@ -239,10 +213,6 @@ h3 {
   height: 2px;
   background-color: $accent-color;
 
-  //   width: 100%
-  // left: 50%
-  // transform: translateX(-50%)
-
   @media screen and (max-width: 767px) {
     margin-left: 130px;
   }
@@ -252,4 +222,23 @@ h3 {
   @media screen and (min-width: 1320px) {
     margin-left: 200px;
   }
+}
+
+.doing-hover:hover {
+  background-color: $accent-color;
+  color: $fourth-text-color;
+}
+.doing-hover:hover .description::before {
+  background-color: $fourth-text-color;
+}
+.doing-hover:hover .description {
+  background-color: $accent-color;
+  color: $fourth-text-color;
+}
+.doing-hover:hover .container-title {
+  background-color: $accent-color;
+  color: $fourth-text-color;
+}
+.container-element:hover .icon-container {
+  fill: $fourth-text-color;
 }
