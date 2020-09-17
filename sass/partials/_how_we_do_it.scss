@@ -5,63 +5,94 @@ h3 {
   margin-bottom: 0;
 }
 
-// .container-doit {
-//   width: 100%;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   box-sizing: border-box;
+.section-doit {
+  width: 100%;
+  background: $basic-bg-color;
 
-//   @media screen and (min-width: 320px) {
-//     width: 280px;
-//     padding-left: 40px;
-//     padding-right: 40px;
-//   }
+  @media screen and (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 
-//   @media screen and (min-width: 1320px) {
-//     @media screen and (min-width: 768px) {
-//       //   width: 690px;
-//       width: 1320px;
-//       padding: 0;
-//     }
-//   }
-// }
+  @media screen and (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1320px) {
+    padding-left: 183px;
+    padding-right: 183px;
+    margin-top: 130px;
+    margin-bottom: 130px;
+  }
+}
+
+.container-doit {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background: $fourth-text-color;
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+    // padding-left: 40px;
+    // padding-right: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 690px;
+  }
+
+  @media screen and (min-width: 1320px) {
+    width: 1320px;
+    padding: 0;
+  }
+}
 
 .section-title {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
   line-height: 1.3;
   letter-spacing: 0.03em;
   color: $second-text-color;
+  background: $fourth-text-color;
 
   @media screen and (max-width: 767px) {
+    // margin-top: 50px;
     margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1319px) {
     margin-bottom: 30px;
+    font-size: 26px;
+    text-align: center;
   }
 
   @media screen and (min-width: 1320px) {
     margin-bottom: 50px;
+    font-size: 46px;
   }
 }
 
 .flex-container {
   @extend %list;
 
-  @media screen and (max-width: 767px) {
-    padding-top: 40px;
-  }
+  // @media screen and (max-width: 767px) {
+  //   // padding-top: 40px;
+  // }
 
   @media screen and (min-width: 768px) and (max-width: 1319px) {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 14px;
-    margin: -15px;
+    // padding-top: 14px;
+    // margin: -15px;
   }
 
   @media screen and (min-width: 1320px) {
@@ -77,7 +108,7 @@ h3 {
   box-sizing: border-box;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
 
     &:not(:last-child) {
@@ -93,14 +124,18 @@ h3 {
 
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 4 * 10px) / 2);
-    margin-right: 20px;
+    // margin-right: 20px;
     // margin-bottom: 27px;
   }
 
-  @media screen and (min-width: 768px) {
-    tr:nth-child(2n) {
-      margin-right: 0;
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
+    &:not(:nth-child(2n)) {
+      margin-right: 20px;
     }
+
+    // tr:nth-child(2n) {
+    //   margin-right: 0;
+    // }
   }
 
   @media screen and (min-width: 1320px) {
@@ -119,12 +154,13 @@ h3 {
 .icon-container {
   fill: #ff6b09;
   width: 100%;
-  @media screen and (min-width: 320px) {
-    margin-top: 29px;
-    margin-bottom: 19px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1319px) {
+  @media screen and (min-width: 768px) {
     margin-top: 40px;
     margin-bottom: 30px;
   }
@@ -134,27 +170,52 @@ h3 {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.08em;
   color: #111518;
+
+  @media screen and (max-width: 1319px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1320px) {
+    font-size: 20px;
+  }
 }
 
 .description {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.56;
   text-align: center;
   letter-spacing: 0.08em;
   color: #b9b9b9;
+
+  @media screen and (max-width: 1319px) {
+    font-size: 12px;
+    line-height: 1.67;
+    padding-bottom: 22px;
+  }
+
+  @media screen and (min-width: 1320px) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.description::before {
+  margin-bottom: 23px;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: $accent-color;
 }
 
 .hover-box:hover {
-  color: #ffffff;
-  fill: #ffffff;
+  color: $fourth-text-color;
+  fill: $fourth-text-color;
   background-color: $accent-color;
-  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 }
