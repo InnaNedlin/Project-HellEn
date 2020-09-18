@@ -1,12 +1,15 @@
 .students-problems {
-  padding-top: 50px;
-  padding-bottom: 367px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: #111518;
-  height: 545px;
 
-  @include tablet {
+  @media screen and (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 367px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 545px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
     padding-top: 60px;
     padding-bottom: 176px;
     padding-left: 42px;
@@ -14,7 +17,7 @@
     height: 340px;
   }
 
-  @include desktop {
+  @media screen and (min-width: 1320px) {
     width: 100%;
     padding-top: 100px;
     padding-bottom: 282px;
@@ -22,37 +25,49 @@
     padding-right: 631px;
 
     height: 560px;
-    background-image: url(../images/student_problems_img/fire.svg.#icon-fire);
-    background-repeat: no-repeat;
-    background-position: bottom 0px right 0px;
   }
 }
 
-.section-title-problems {
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 1.35;
-  letter-spacing: 0.03em;
-  text-align: left;
+.bg-image {
+  background-image: url(./fire.png);
   color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+  // width: 455px;
+  // height: 472px;
+}
+
+// .icon {
+//   fill: blueviolet;
+// }
+.students-problems-title {
+  color: #ffffff;
+  @media screen and (max-width: 767px) {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #ffffff;
+    width: 280px;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1319px) {
     font-size: 26px;
+    width: 457px;
   }
 
   @media screen and (min-width: 1320px) {
     font-size: 46px;
+    width: 866px;
   }
 }
 
 .color-text {
   color: $accent-color;
 }
-
-// .students-problems-title {
-// }
 
 // .students-problems-list {
 // }

@@ -368,6 +368,34 @@ body {
           box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
 }
 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 690px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .container {
+    width: 1320px;
+  }
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -526,7 +554,8 @@ h3 {
 }
 
 .container-element {
-  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   background: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -544,6 +573,10 @@ h3 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1319px) {
+  .container-element {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .container-element:not(:nth-last-child(-n + 2)) {
     margin-bottom: 27px;
   }
@@ -695,5 +728,83 @@ h3 {
 
 .container-element:hover .icon-container {
   fill: #ffffff;
+}
+
+.students-problems {
+  background-color: #111518;
+}
+
+@media screen and (max-width: 767px) {
+  .students-problems {
+    padding-top: 50px;
+    padding-bottom: 367px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 545px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .students-problems {
+    padding-top: 60px;
+    padding-bottom: 176px;
+    padding-left: 42px;
+    padding-right: 158px;
+    height: 340px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .students-problems {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 282px;
+    padding-left: 183px;
+    padding-right: 631px;
+    height: 560px;
+  }
+}
+
+.bg-image {
+  background-image: url(./fire.png);
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+}
+
+.students-problems-title {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .students-problems-title {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #ffffff;
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .students-problems-title {
+    font-size: 26px;
+    width: 457px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .students-problems-title {
+    font-size: 46px;
+    width: 866px;
+  }
+}
+
+.color-text {
+  color: #ff6b09;
 }
 /*# sourceMappingURL=1index.css.map */
